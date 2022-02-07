@@ -6,7 +6,7 @@ const port = process.env.port || 80;
 const mongoose = require("mongoose");
 const { read } = require("fs");
 app.use(express.urlencoded({extended:true}));
-mongoose.connect('mongodb://localhost:27017/ecommerce', {useNewUrlParser : true});
+mongoose.connect('mongodb+srv://asadnoor:shaguftanaz@cluster0.araou.mongodb.net/minecraftalts?retryWrites=true&w=majority', {useNewUrlParser : true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, "error"));
 db.once('open', ()=>{
